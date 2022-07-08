@@ -1,5 +1,80 @@
+/* import font api */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+/* import font awesome */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+/* import bootstrap */
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css);
+/* import custom css */
+
+
+/* creating variables for the css doc */
+:root {
+    --primary-bg-color: #131417;
+    --secondary-bg-color: #1f1f1f;
+    --color-primary: #00bcd4;
+    --color-secondary: #fafafa;
+    --fonnt-primary: 'Roboto', sans-serif;
+    --font-secondary: 'font-awesome', sans-serif;
+    /* https://www.pixelconverter.com/pixel-to-percentage-converter/ */
+    /* https://elementor.com/help/whats-the-difference-between-px-em-rem-vw-and-vh/#:~:text=While%20PX%2C%20EM%2C%20and%20REM%20are%20primarily%20used,height%2C%20or%20the%20full%20height%20of%20the%20screen. */
+    --font-size-primary: 1.2rem; /* 1.2rem = 18px = 125% */
+    --font-size-secondary: 1.6rem; /* 1.6rem = 24px = 10% */
+    --font-size-tertiary: 2.4rem; /* 2.4rem = 36px = 225% */
+    --font-size-quaternary: 3.2rem; /* 3.2rem = 48px = 300% */
+    --font-size-quinary: 4.2rem; /* 4.2rem = 60px = 375% */
+    --font-size-senary: 5.2rem; /* 5.2rem = 72px = 450% */
+    --gap: 2rem;  /* 2rem = 24px = 150% */
+    --gap-double: 4rem; /* 4rem = 48px = 300% */ 
+    --margin-small: 2rem; 
+    --margin-medium: 3rem;
+}
+
 /* universal styling */
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
 
 /* document styling */
+html {
+    font-size: 62.5%;
+    font-family: var(--fonnt-primary)   
+}
 
-/*  */
+/* body */
+body {
+    background-color: var(--primary-bg-color);
+    color: var(--color-secondary);
+    font-family: var(--fonnt-primary);
+    font-size: var(--font-size-primary);
+    letter-spacing: 1px;  
+}
+
+a {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;     
+}
+
+input, button, textarea {
+    font-family: var(--fonnt-primary);
+    font-size: var(--font-size-primary);
+    letter-spacing: 1px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+i {
+    font-size: var(--font-size-secondary);
+}
+
