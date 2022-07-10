@@ -1,0 +1,71 @@
+/* styles to be effected with java script */
+/* .header.activated { */
+    /* box-shadow: 0 1px .5px rgba(83, 105, 139, 0.1); ; */
+    /* this will show the header */
+    /* opacity: 1;  */
+    /* this will scale the header */
+    /* transform: scale(1);  
+} */
+
+/* .menu.activated { */
+    /* box-shadow: 1px 1px 1px rgba(83, 105, 139, 0.1); ; */
+    /* this will show the menu */
+    /* opacity: 1;  */
+    /* this will scale the menu */
+    /* transform: scale(1);  
+} */
+
+/* hide the menu when the screen is small */
+/* .toggle-icon.activated .open-menu-icon {
+    display: none; 
+} */
+
+/* show the menu when the screen is small */
+/* .toggle-icon.activated  .close-menu-icon {
+    display: block;  
+} */
+
+/* screen size changes (responsive design) */
+@media screen and (min-width: 600px) { /* any device with width more than 600px will be affected */
+    .menu {
+        display: block;
+        opacity: 1;
+        transform: scale(1);
+        height: auto; /* this will make the menu expand to the height of the screen */
+    }
+    .ion-md-close{
+        display: none;
+    }
+    .ion-md-list{
+        display: none;
+    }
+    .logo {
+        font-size: var(--font-size-secondary);
+    }
+    .menu > .list{
+        flex-direction: row;
+    }
+    .list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .list-link {
+        font-size: var(--font-size-secondary);
+    }
+    .list-link.current {
+        font-size: var(--font-size-primary);
+    }
+    .list-link:hover,
+    .btn:hover,
+    .btn:hover span{
+        color: var(--color-primary);
+        text-decoration: none;
+    }
+    .nav-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: var(--gap);
+    }
+}
