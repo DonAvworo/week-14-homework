@@ -15,6 +15,11 @@ openMenuIcon.addEventListener('click', function() {
   // openMenuIcon.style.visibility = 'hidden'; // refer to the css file (line 110-117) on notes to see how to hide the icon
   closeIcon.style.display = 'block';
   listIcon.style.display = 'none';
+
+  //add smooth transition to open the menu
+  openMenuIcon.style.transition = '0.25s ease-in';
+  openMenuIcon.style.opacity = '1';
+  openMenuIcon.style.transform = 'translateX(1)';
 });
 
 //add event listener to the close icon which will close the menu
@@ -24,7 +29,42 @@ closeMenuIcon.addEventListener('click', function(){
   menu.style.display = 'none'; 
   listIcon.style.display = 'block';
   closeIcon.style.display = 'none';
-  
+
+  //add smooth transition to close the menu
+  // closeMenuIcon.style.opacity = '0';
+  // closeMenuIcon.style.transform = 'translateX(-1)';
 });
+
+// create variables to display and hide the search form
+let openSearchForm = document.getElementById('search-icon');
+let closeSearchForm = document.getElementById('close-search-btn');
+let searchFormBox = document.getElementById('search-form-box');
+
+//when menu icon is clicked, display the search form
+openSearchForm.addEventListener('click', function(){
+ //alert('search icon clicked'); //test PASSED
+ searchFormBox.style.visibility = 'visible';
+
+  //add smooth transition to the search form
+  searchFormBox.style.transition = '0.25s ease-in';
+  searchFormBox.style.opacity = '1';
+  searchFormBox.style.transform = 'translateX(1)';
+
+  //add image to the menu background
+  searchFormBox.style.backgroundImage = 'url(./assets/images/Photoleap-5.png)';
+  document.body.style.backgroundImage = 'url(./assets/images/Photoleap-5.png)';
+});
+
+//when close icon is clicked, hide the search form
+closeSearchForm.addEventListener('click', function(){
+  //alert('close search clicked'); //test PASSED
+  searchFormBox.style.visibility = 'hidden';
+  
+  //add smooth transition to the search form
+  searchFormBox.style.transition = '0.25s ease-out';
+  searchFormBox.style.opacity = '0';
+  searchFormBox.style.transform = 'translateX(-1)';
+});
+
 
 
