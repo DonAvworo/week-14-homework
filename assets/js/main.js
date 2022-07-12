@@ -59,6 +59,13 @@ openSearchForm.addEventListener('click', function(){
 closeSearchForm.addEventListener('click', function(){
   //alert('close search clicked'); //test PASSED
   searchFormBox.style.visibility = 'hidden';
+
+  //if the menu is open when search icon is clicked,close it when the search form is closed
+  // menu.style.display = 'none'; //test PASSED but lacks logic
+
+  if(menu.style.display === 'block'){
+    menu.style.display = 'none';
+  }
   
   //add smooth transition to the search form
   searchFormBox.style.transition = '0.25s ease-out';
