@@ -24,7 +24,6 @@ openMenuIcon.addEventListener('click', function() {
 
 //add event listener to the close icon which will close the menu
 closeMenuIcon.addEventListener('click', function(){
-  
   // alert('icon clicked');
   menu.style.display = 'none'; 
   listIcon.style.display = 'block';
@@ -63,7 +62,7 @@ closeSearchForm.addEventListener('click', function(){
   //if the menu is open when search icon is clicked,close it when the search form is closed
   // menu.style.display = 'none'; //test PASSED but lacks logic
 
-  if(menu.style.display === 'block'){
+  if(menu.style.display === 'block'){ // more logical arg. to close the menu
     menu.style.display = 'none';
   }
   
@@ -72,6 +71,8 @@ closeSearchForm.addEventListener('click', function(){
   searchFormBox.style.opacity = '0';
   searchFormBox.style.transform = 'translateX(-1)';
 });
+
+
 
 
 
