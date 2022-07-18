@@ -7,6 +7,8 @@
     --primary-bg-color: #131417;
     --secondary-bg-color: #383535;
     --tertiary-bg-color: #383232;
+    --transparent-bg-color-dark: rgba(0, 0, 0, 0.45);
+    --transparent-bg-color-light: rgba(0, 0, 0, 0.5);
     --color-primary: #00bcd4;
     --color-secondary: #fafafa;
     --color-tertiary: #9ac9f0;
@@ -146,7 +148,7 @@ i {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 30 !important;
+    z-index: 200 !important;
     
 }
 /* The navigation */
@@ -163,7 +165,8 @@ i {
     color: var(--color-primary);
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-decoration: none;  
+    text-decoration: none;
+    border-radius: 20px;  
 }
 
 /* styling for the class "menu" inside the div containing the anchor tags

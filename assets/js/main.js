@@ -72,6 +72,21 @@ closeSearchForm.addEventListener('click', function(){
   searchFormBox.style.transform = 'translateX(-1)';
 });
 
+// <!-- article-banner.html -->
+// let articleBanner = document.getElementById('banner-letters');
+// function changeColor () {
+
+//   let articleBanner = ['t', 'e', 'c', 'h', 'n', 'o', 'l', 'o', 'g', 'y'];
+ 
+//   let r = Math.floor(Math.random() * 256);
+//   let g = Math.floor(Math.random() * 256);
+//   let b = Math.floor(Math.random() * 256); 
+
+//   for (let i = 0; i < articleBanner.length; i++) {
+//     articleBanner[i].style.color = `rgb(${r}, ${g}, ${b})`;
+//   }
+// }
+// changeColor();
 
 
 

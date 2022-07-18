@@ -20,8 +20,8 @@
         <nav class="nav-bar nav-container">
         
             <a href="index.html">
-                <h2 class="logo">Tech-Blog</h2>
-                <!-- <img src="img/logo.png" alt="logo"> logo will be added here -->
+                <!-- <h2 class="logo">Tech-Blog</h2> -->
+                <img src="./assets/image/tech-blog-logo.JPG" width="30px"> 
             </a>
             
             <!-- drop down menu -->
@@ -102,7 +102,7 @@
 
     </div>
 
-    <!-- Path: articles. this wrapper will be used to position the articles -->
+    <!-- Path: article container. this wrapper will be used to position the articles -->
     <div class="articles-container av-container">
 
         <!-- article-banner.html -->
@@ -113,8 +113,9 @@
             </div>
 
             <div class="banner-text">  
+                
                 <h1>
-                    <span>
+                    <span class="banner-letters" id="banner-letters">
                         <span class="first-letter">T</span>
                         <span class="second-letter">e</span>
                         <span class="third-letter">c</span>
@@ -132,74 +133,43 @@
 
         <!-- article-header -->
         <div class="articles-header">  <!-- heading. this is the header of the article-->
-            <h3 class="articles-header-title">Articles</h3>
-            <a href="#" class="articles-header-link">See all</a>
+            <a href="#" class="articles-header-link">See all articles</a>
         </div>
 
-        <div class="articles-content"> <!-- article container -->
-            
-            <!-- this card will be copied to cfreate others. all comments applies to other cards created from this -->
-            <div class="article-item"> <!-- article item. this is the wrapper for the general posts -->
-                <div class="article-item-img"> <!-- article item image will be used to style the image content -->
-                    <img src="./assets/image/Photoleap-3.png" alt="article-img">
-                </div>
-                <div class="article-item-content">  <!-- this is the wrapper containing the post,date and time, and name of author -->
-                    <h4 class="article-item-title">
-                        <a href="#">
-                            Working with the latest technologies
-                        </a>
-                    </h4>
-                    <p class="article-item-text"> <!-- this is the content of the post -->
-                       I just finished my first project with the latest technologies. I am very happy with the result.
-                    </p>
-                    <div class="article-item-info"> <!-- this is the info of the post containing the date, time and authors name -->
-                        <div class="article-item-info-item"> <!-- DATE -->
-                            <i class="icon ion-md-calendar"></i>
-                            <span>12.07.2022</span>
-                        </div>
-                        <div class="article-item-info-item"> <!-- TIME -->
-                            <i class="icon ion-md-time"></i>
-                            <span>12:00</span>
-                        </div>
-                        <div class="article-item-info-item"> <!-- AUTHOR -->
-                            <i class="icon ion-md-person"></i>
-                            <span>Don Avworo</span>
-                        </div>
-                    </div>
-                </div>
+        <!-- article-list -->
+       
+        <div class="article-item-container"> <!-- article item image will be used to style the image content -->
+            <img  class="article-image" src="./assets/image/Photoleap-6.png" alt="article-img">
+    
+            <h4 class="article-item-title"> <!-- article title -->
+                <a href="#">
+                    Working with the latest technologies
+                </a>
+            </h4>
+                   
+            <p class="article-item-text"> <!-- this is the content of the post -->
+                I just finished my first project with the latest technologies. I am very happy with the result.
+                I just finished my first project with the latest technologies. I am very happy with the result.
+                I just finished my first project with the latest technologies. I am very happy with the result.
+            </p>
+
+            <div class="article-item-info-item" > <!-- AUTHOR -->
+                <i class="icon ion-md-person icon-spacing shrink-icon"></i>
+                <span class="author">Don Avworo</span>
+            </div>
+               
+            <div class="article-item-info-item"> <!-- DATE -->
+                <i class="icon ion-md-calendar icon-spacing shrink-icon"></i>
+                <span class="date">12.07.2022</span>
             </div>
 
-            <div class="article-item">
-                <div class="article-item-img">
-                    <img src="img/article-img.jpg" alt="article-img">
-                </div>
-                <div class="article-item-content">
-                    <h4 class="article-item-title">
-                        <a href="#">
-                            Lorem ipsum dolor sit
-                        </a>
-                    </h4>
-                    <p class="article-item-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quisquam, quidem.
-                    </p>    
-                    <div class="article-item-info">
-                        <div class="article-item-info-item">
-                            <i class="icon ion-md-calendar"></i>
-                            <span>12.04.2022</span>
-                        </div>
-                        <div class="article-item-info-item">
-                            <i class="icon ion-md-time"></i>
-                            <span>12:00</span>
-                        </div>
-                        <div class="article-item-info-item">
-                            <i class="icon ion-md-person"></i>
-                            <span>John Doe</span>
-                        </div>  
-                    </div>
-                </div>
+            <div class="article-item-info-item"> <!-- TIME -->
+                <i class="icon ion-md-time icon-spacing shrink-icon"></i>
+                <span class="time">12:00</span>
             </div>
-        </div>
+
+        </div§>
+        
     </div>
     <!-- end of articles section -->
 
