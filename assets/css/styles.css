@@ -80,9 +80,9 @@
         
     }
 }
-    
+ 
+/* <!-- article-header --> */
 .articles-header { 
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,12 +94,10 @@
 
 
 .articles-header-link{
-    /* position: absolute; */
     font-size: var(--font-size-secondary);
     font-weight: bold;
     color: var(--color-secondary);
     border-radius: var(--border-radius);
-    /* margin-bottom: var(--gap); */
     z-index: 100;
     top: 3rem;
     left: 3rem;
@@ -118,14 +116,13 @@
     text-align: center;
     justify-items: center;
     color: var(--color-secondary);
+    
 }
 
 /* <!-- Path: article container.  */
 .article-item-container {
     position: relative;
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
     
 }
 
@@ -136,13 +133,20 @@
     height: 100%;
     object-fit: cover;
     object-position: inherit;
+    cursor: pointer;
 }
+
+.article-image:hover {
+    opacity: .5;
+}
+
 
 /* <!-- article title --> */
 .article-item-title { 
     position: absolute;
     display: flex;
-    max-width: 100%;
+    width: 100%;
+    justify-content: center;
     text-align: center;
     text-transform: uppercase;
     text-shadow: var(--color-primary) 0px 0px 30px;
@@ -150,6 +154,13 @@
     top: 0;
     left: 0%;
     padding: var(--gap);
+}
+
+.article-item-title {
+    text-shadow: var(--color-primary) 0px 0px 30px;
+    text-indent: unset;
+    justify-items: center;
+    color: var(--color-secondary);
 }
 
 /* <!-- this is the content of the post --> */
@@ -166,13 +177,65 @@
 
 }
 
-/* scale the the text to fit the screen */
-@media screen and (max-width: 250px) {
+/* scale the the text to fit the screen  small screens */
+@media screen and (min-width: 20px) {
     .article-item-text {
-        font-size: .8rem;
+        font-size: .9rem;
     }
 }
 
+/* scale the the text to fit the screen large  screens */
+@media screen and (min-width: 350px) {
+    .article-item-text {
+        font-size: var(--font-size-secondary);
+    }
+}
 
+/* <!-- container for icon, time, author and date data --> */
+.icons-container {
+    margin-right: var(--gap);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: var(---transparent-bg-color-dark);
+    display: flex;
+    justify-content: center;
+}
 
+.icon-img {
+    max-width: 100%;
+    cursor: pointer;
+}
 
+.icon-img:hover {
+    filter: brightness(.5);
+}
+
+/* shrink icons to fitcontainer */
+@media screen and (min-width: 250px) {
+    .icons-container {
+        width: auto;
+        height: auto;
+        margin-right: 0;
+        font-size: 1rem;
+    }
+
+    .shrink-icon{
+        font-size: 1.5rem;
+        gap: var(--gap);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .article-item-info-item {
+        font-size: 1rem;
+        background-color: black;
+        max-width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+    }
+}
+    
