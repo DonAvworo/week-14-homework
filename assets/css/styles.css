@@ -14,9 +14,13 @@
         border-radius: var(--border-radius);
 }
 
+
 /* <!-- article container --> */
     .articles-container {
-        padding-block: var(--gap-double);
+    padding-block: var(--gap-double);
+    background-color: var(--secondary-bg-color);
+    border-radius: var(--border-radius);
+    gap: var(--gap);
 
         
         
@@ -31,6 +35,13 @@
     height: 10%;
     /* padding: var(--gap); */
     background-color: var(--secondary-bg-color);  
+}
+
+/* TODO  have the banner to remain visible when scrollin up*/
+@media screen and (min-width: 370px) { 
+    .banner-container  {
+        position: sticky;
+    } 
 }
 
 .banner-image-container{
@@ -127,7 +138,7 @@
 }
 
 .article-image{
-    position: relative;
+    /* position: relative; */
     display: flex;
     width: 100%;
     height: 100%;
@@ -238,4 +249,26 @@
         flex-direction: row;
     }
 }
-    
+
+/* flex styling for the  article container */
+
+.article-item-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+/* End of Path: article container styling */
+
+    /* <!-- Path: aside container styling */
+   
+        
