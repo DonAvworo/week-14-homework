@@ -1,274 +1,89 @@
-/* Path: articles */
 
-/* <!-- heading. this is the header of the article--> */
-    .articles-container {
-        display: flex;
-        position: relative;
-        margin-top: 7rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: var(--gap);
-        background-color: var(--secondary-bg-color);
-        border-radius: var(--border-radius);
+/* <!--         Nav bar styling           --> */
+
+/* <!--     Nav bar     --> */
+.nav-bar {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--gap);
+    background-color: var(--primary-bg-color);
 }
 
-
-/* <!-- article container --> */
-    .articles-container {
-    padding-block: var(--gap-double);
-    background-color: var(--secondary-bg-color);
-    border-radius: var(--border-radius);
-    gap: var(--gap);
-
-        
-        
-}
-/* article-banner.html */
-.banner-container {
+/* <!--     Logo    --> */
+.logo-container {
+    display: flex;
     position: relative;
-    /* display: flex; */
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
+}
+
+.logo.image {
     width: 100%;
-    height: 10%;
-    /* padding: var(--gap); */
-    background-color: var(--secondary-bg-color);  
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-/* TODO  have the banner to remain visible when scrollin up*/
-@media screen and (min-width: 370px) { 
-    .banner-container  {
-        position: sticky;
-    } 
-}
-
-.banner-image-container{
-    display: flex;
-    width: 100%;
-    /* padding: var(--gap); */
-}
-
-.banner-image {
-    display: flex;
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
-    /* object-position: inherit; */
-}
-
-.banner-text {
+.logo-text {
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: var(--gap);
+    bottom: 0%;
+    width: 100%;
     text-align: center;
+    font-size: 1rem;
+    font-family: var( --font-tertiary);
+    color: var(--primary-bg-color);
+    font-size: 1rem;
     text-transform: uppercase;
-    /* background-color: var(--secondary-bg-color); */
-    background-color: transparent;
-    color: var(--color-secondary);
-    border-radius: var(--border-radius);
-    text-shadow: var(--color-primary) 0px 0px 30px;
-    /* border: 1.5px solid var(--color-primary); */
-    /* box-shadow: var(--color-primary) 0px 0px 30px; */
-    max-width: 100%;
-    right: 1rem;
-    top: 1rem;    
-}
-
-/* banner media  query */
-@media screen and (max-width: 400px) {
-    .banner-text {
-        font-size: .8rem;
-        /* align-items: center; */
-        /* justify-content: center; */
-        /* text-align: center; */
-        top: .2rem;
-        right: 3.5rem;
-        
-    }
-}
- 
-/* <!-- article-header --> */
-.articles-header { 
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: var(--gap);
-    background-color: var(--secondary-bg-color);
-    border-radius: var(--border-radius);
+    /* font-size: var(--font-size-secondary); */
 }
 
+/* <!--   nav link   --> */
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
 
-.articles-header-link{
-    font-size: var(--font-size-secondary);
-    font-weight: bold;
-    color: var(--color-secondary);
-    border-radius: var(--border-radius);
-    z-index: 100;
-    top: 3rem;
-    left: 3rem;
-    text-transform: uppercase;
-    text-shadow: aqua 0px 0px 1px;
+nav ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--gap);
+    margin: 0;
+    list-style: none;
     text-decoration: none;
-    color: var(--color-primary);
-    cursor: pointer;
-    max-width: 100%;
-    flex-direction: column;
-}
-
-:hover.articles-header-link {
-    text-shadow: var(--color-primary) 0px 0px 30px;
-    text-indent: unset;
-    text-align: center;
-    justify-items: center;
     color: var(--color-secondary);
-    
+    font-family: var(--font-tertiary);
 }
 
-/* <!-- Path: article container.  */
-.article-item-container {
-    position: relative;
-    display: flex;
-    
-}
-
-.article-image{
-    /* position: relative; */
-    display: flex;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: inherit;
-    cursor: pointer;
-}
-
-.article-image:hover {
-    opacity: .5;
-}
-
-
-/* <!-- article title --> */
-.article-item-title { 
-    position: absolute;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    text-align: center;
+nav ul  li a {
+    text-decoration: none;
+    color: var(--color-secondary);
+    font-family: var(--font-tertiary);
+    font-size: 1rem;
     text-transform: uppercase;
-    text-shadow: var(--color-primary) 0px 0px 30px;
-    background-color: var(--transparent-bg-color-dark);
-    top: 0;
-    left: 0%;
-    padding: var(--gap);
 }
+    
 
-.article-item-title {
-    text-shadow: var(--color-primary) 0px 0px 30px;
-    text-indent: unset;
-    justify-items: center;
-    color: var(--color-secondary);
-}
-
-/* <!-- this is the content of the post --> */
-.article-item-text {
-    position: absolute;
-    display: flex;
-    width: 100%;
-    padding: var(--gap);
-    background-color: var(--transparent-bg-color-dark);
-    bottom: 0;
-    left: 0%;
-    text-align: center;
-    border: 0 .5rem solid var(--transparent-bg-color-light);
-
-}
-
-/* scale the the text to fit the screen  small screens */
-@media screen and (min-width: 20px) {
-    .article-item-text {
-        font-size: .9rem;
-    }
-}
-
-/* scale the the text to fit the screen large  screens */
-@media screen and (min-width: 350px) {
-    .article-item-text {
-        font-size: var(--font-size-secondary);
-    }
-}
-
-/* <!-- container for icon, time, author and date data --> */
-.icons-container {
-    margin-right: var(--gap);
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    background-color: var(---transparent-bg-color-dark);
-    display: flex;
-    justify-content: center;
-}
-
-.icon-img {
-    max-width: 100%;
-    cursor: pointer;
-}
-
-.icon-img:hover {
-    filter: brightness(.5);
-}
-
-/* shrink icons to fitcontainer */
-@media screen and (min-width: 250px) {
-    .icons-container {
-        width: auto;
-        height: auto;
-        margin-right: 0;
-        font-size: 1rem;
-    }
-
-    .shrink-icon{
-        font-size: 1.5rem;
-        gap: var(--gap);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .article-item-info-item {
-        font-size: 1rem;
-        background-color: black;
-        max-width: 100%;
-        justify-content: space-evenly;
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-    }
-}
-
-/* flex styling for the  article container */
-
-.article-item-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
+    
 
 
 
+/* <!-- main --> */
 
+/* <!-- sidebar --> */
 
+/* <!-- content --> */
 
-
-/* End of Path: article container styling */
-
-    /* <!-- Path: aside container styling */
-   
-        
+/* <!-- footer --> */

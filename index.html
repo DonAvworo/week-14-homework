@@ -9,401 +9,70 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=montserrat:300,400,500,700" rel="stylesheet">
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     
     <title>Tech-Blog | Home </title>
 </head>
 <body>
-    <!-- Path: header.html -->
-    <header class="header" id="header">
-
-        <nav class="nav-bar nav-container">
-        
-            <a href="index.html">
-                <!-- <h2 class="logo">Tech-Blog</h2> -->
-                <img src="./assets/image/tech-blog-logo.JPG" width="30px"> 
-            </a>
-            
-            <!-- drop down menu -->
-            <div class="menu" id="menu">
-                <ul class="list">
-                    <li class="list-item"> 
-                       <a href="#" class="list-link current">Home</a>
-                    </li>
-
-                    <li class="list-item"> 
-                        <a href="#" class="list-link">About</a>
-                    </li>
-
-                    <li class="list-item"> 
-                        <a href="#" class="list-link">Reviews</a>
-                    </li>
-
-                    <li class="list-item"> 
-                        <a href="#" class="list-link">Trending</a>
-                    </li>
-
-                    <li class="list-item"> 
-                        <a href="#" class="list-link">Join</a>
-                    </li>
-
-                    <li class="list-item"> 
-                        <a href="#" class="list-link">Contact</a>
-                    </li>
-
-                    <li class="list-item lrg-screen-hidden"> <!-- the secondary class "lrg-screen-hidden" will be used to hide and substitute the link when the screen is scaled large -->
-                        <a href="#" class="list-link">Login</a>
-                    </li>
-
-                    <li class="list-item lrg-screen-hidden"> <!-- the secondary class "lrg-screen-hidden" will be used to hide and substitute the link when the screen is scaled large -->
-                        <a href="#" class="list-link">Log out</a>
-                    </li>        
-                </ul>
-            </div>
-
-            <!--header buttons-->  
-            <div class="list list-right">
-                <button class="btn possition-btn-center search-icon" id="search-icon">
-                    <i class="icon ion-md-search"></i>
-                </button>
-
-                <button class="btn possition-btn-center lrg-screnn-hidden toggle-icon" id="toggle-icon">
-                    <i class="icon ion-md-list open-menu-icon" id="icon-name-list"></i> <!--the secondary class "open-menu-icon" will be used to change the icons-->
-                    <i class="icon ion-md-close close-menu-icon" id="icon-name-close"></i> <!--the secondary class "close-menu-icon" will be used to change the icons-->
-                </button>
-
-                <a href="#" class="list-link  login-log-out smll-screen-hidden btn">
-                    Login
-                </a>
-
-                <a href="#" class="list-link  login-log-out smll-screen-hidden btn sign-up-btn fancy-border">
-                    <span>Log out</span>
-                </a>
-            </div>
-        
-        </nav>
-    </header>
-
-    <!-- Path: search.html -->
-    <div class="search-form-box av-container" id="search-form-box">
-        <div class="form-box">
     
-            <form action="#" class="search-form">
-                <input type="text" class="search-input" placeholder="Search for topics">
-                <button type="submit" class="search-btn">
-                    <i class="icon ion-md-arrow-dropright-circle"></i>
-                </button>
-            </form>
-        </div>
+    <!-- New article container -->
+    <div class="new-article-container new-article-grid-layout">
+        <!--    Nav bar   -->
+        <nav class="nav-bar" id="nav-bar">
+            
+            <!--    Logo    -->  
+            <div class="logo-container"> 
+                <img src="./assets/image/tech-blog-logo.JPG" alt=" "class="logo-image" width="100px">
+                <label class="logo-text"> Tech-Blog</label> 
+            </div>
+            <!--    nav link     -->
+            <ul class="nav-list">
+                <li class="nav-items"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-items"><a href="#" class="nav-link">About</a></li>
+                <li class="nav-items"><a href="#" class="nav-link">News</a></li>
+                <li class="nav-items"><a href="#" class="nav-link">Reviews</a></li>
+                <li class="nav-items"><a href="#" class="nav-link">Categories</a></li>
+                <li class="nav-items"><a href="#" class="nav-link">Contact</a></li>
+                <li class="nav-items"><a href="#" class="nav-link">Members</a></li>
+                <li class="nav-items"><a href="#" class="nav-link hide-in-lrg-screen">Sign-In</a></li>
+                <li class="nav-items"><a href="#" class="nav-link hide-in-lrg-screen">Sign-Up</a></li>
+            </ul>
+        </nav>
+        <!--    End of nav bar   -->
 
-        <button class="close-search-btn possition-btn-center" id="close-search-btn">
-            <i class="icon ion-md-close-circle"></i>
-        </button>
+    
+        <!-- main container-->
+        <main class="main-container" id="main-container">
+            Main 
+        </main>
 
+        <!-- sidebar container-->
+        <aside class="sidebar-container" id="sidebar-container">
+           Aside
+        </aside>
+
+        <!-- content  01 -->
+        <section class="content-01 section-content-container" id="content-01">
+            Content-01
+        </section>
+
+        <!-- content  02 -->
+        <section class="content-02 section-content-container" id="content-02">
+            Content-02
+        </section>
+
+        <!-- content  03 -->
+        <section class="content-03 section-content-container" id="content-03">
+            Content-03
+        </section>
     </div>
-
-    <!-- Path: article container. this wrapper will be used to position the articles -->
-    <div class="articles-container av-container">
-
-        <!-- article-banner.html -->
-        <div class="banner banner-container">
-
-            <div class="banner-image-container">
-                <img src="./assets/image/Photoleap-9.png" alt="banner" class="banner-image">
-            </div>
-
-            <div class="banner-text">  
-                
-                <h1>
-                    <span class="banner-letters" id="banner-letters">
-                        <span class="first-letter">T</span>
-                        <span class="second-letter">e</span>
-                        <span class="third-letter">c</span>
-                        <span class="fourth-letter">h</span>
-                        <span class="fifth-letter">-</span>
-                        <span class="sixth-letter">b</span>
-                        <span class="seventh-letter">l</span>
-                        <span class="eighth-letter">o</span>
-                        <span class="ninth-letter">g</span>
-                    </span>
-                </h1>
-            </div>
-
-        </div>
-
-        <!-- article-header -->
-        <div class="articles-header">  <!-- heading. this is the header of the article-->
-            <a href="#" class="articles-header-link">See all articles</a>
-        </div>
-
-        <!-- article-list -->
-       
-        <!-- Path: article container. -->
-        <div class="article-item-container article-trending-1"> 
-            <img  class="article-image" src="./assets/image/Photoleap-6.png" alt="article-img">
-            
-            <!-- article title -->
-            <h4 class="article-item-title"> 
-                <a href="#">
-                    Working with the latest technologies
-                </a>
-            </h4>
-                   
-            <p class="article-item-text"> <!-- this is the content of the post -->
-                I just finished my first project with the latest technologies. I am very happy with the result.
-                I just finished my first project with the latest technologies. I am very happy with the result.
-                I just finished my first project with the latest technologies. I am very happy with the result.
-            </p>
-
-            <!-- container for icon, time, author and date data -->
-            <div class="icons-container">
-                <div class="article-item-info-item icon-spacing icon-img" > <!-- AUTHOR -->
-                    <i class="icon ion-md-person shrink-icon"></i>
-                    <span class="author">Don Avworo</span>
-                </div>
-               
-                <div class="article-item-info-item icon-spacing icon-img"> <!-- DATE -->
-                    <i class="icon ion-md-calendar shrink-icon"></i>
-                    <span class="date">12.07.2022</span>
-                </div>
-
-                <div class="article-item-info-item icon-spacing icon-img"> <!-- TIME -->
-                    <i class="icon ion-md-time shrink-icon"></i>
-                    <span class="time">12:00</span>
-                </div>
-
-                <div class="article-item-info-item icon-spacing icon-img"> <!-- COMMENTS -->
-                    <i class="icon ion-md-chatbubbles shrink-icon"></i>
-                    <span class="comments">12</span>
-                </div>
-
-                <div class="article-item-info-item icon-spacing icon-img"> <!-- LIKES -->
-                    <i class="icon ion-md-heart shrink-icon"></i>
-                    <span class="likes">12</span>
-                </div>
-            </div>`
-        </div>
-
-        <!-- Path: article container. -->
-        <div class="article-item-container article-trending-2"> 
-            <img  class="article-image" src="./assets/image/Photoleap-3.png" alt="article-img">
-            
-            <!-- article title -->
-            <h4 class="article-item-title"> 
-                <a href="#">
-                    Working hard or hardluy  working
-                </a>
-            </h4>
-                   
-            <p class="article-item-text"> <!-- this is the content of the post -->
-                Working from home is a great way to get your work done.
-                
-            </p>
-
-            <!-- container for icon, time, author and date data -->
-            <div class="icons-container">
-                <div class="article-item-info-item icon-spacing icon-img" > <!-- AUTHOR -->
-                    <i class="icon ion-md-person shrink-icon"></i>
-                    <span class="author">Don Avworo</span>
-                </div>
-               
-                <div class="article-item-info-item icon-spacing icon-img"> <!-- DATE -->
-                    <i class="icon ion-md-calendar shrink-icon"></i>
-                    <span class="date">12.07.2022</span>
-                </div>
-
-                <div class="article-item-info-item icon-spacing icon-img"> <!-- TIME -->
-                    <i class="icon ion-md-time shrink-icon"></i>
-                    <span class="time">12:00</span>
-                </div>
-
-                <div class="article-item-info-item icon-spacing icon-img"> <!-- COMMENTS -->
-                    <i class="icon ion-md-chatbubbles shrink-icon"></i>
-                    <span class="comments">12</span>
-                </div>
-
-                <div class="article-item-info-item icon-spacing icon-img"> <!-- LIKES -->
-                    <i class="icon ion-md-heart shrink-icon"></i>
-                    <span class="likes">12</span>
-                </div>
-            </div>`
-        </div>
-
-        <!-- Path: article container. -->
-        <div class="article-item-container  article-trending-3"> 
-            <img  class="article-image" src="./assets/image/Photoleap-8.png" alt="article-img">
-            
-            <!-- article title -->
-            <h4 class="article-item-title"> 
-                <a href="#">
-                    Become a web dev instructor
-                </a>
-            </h4>
-                   
-            <p class="article-item-text"> <!-- this is the content of the post -->
-                The fun of learning is that you can learn from your mistakes. That's the reason why I love to learn.
-                Becoming a web instructor is a great way to learn and teach. A double benefits for...
-            </p>
-
-            <!-- container for icon, time, author and date data -->
-            <div class="icons-container">
-                <div class="article-item-info-item icon-spacing icon-img" > <!-- AUTHOR -->
-                    <i class="icon ion-md-person shrink-icon"></i>
-                    <span class="author">Don Avworo</span>
-                </div>
-               
-                <div class="article-item-info-item icon-spacing icon-img"> <!-- DATE -->
-                    <i class="icon ion-md-calendar shrink-icon"></i>
-                    <span class="date">12.07.2022</span>
-                </div>
-
-                <div class="article-item-info-item icon-spacing icon-img"> <!-- TIME -->
-                    <i class="icon ion-md-time shrink-icon"></i>
-                    <span class="time">12:00</span>
-                </div>
-
-                <div class="article-item-info-item icon-spacing icon-img"> <!-- COMMENTS -->
-                    <i class="icon ion-md-chatbubbles shrink-icon"></i>
-                    <span class="comments">12</span>
-                </div>
-
-                <div class="article-item-info-item icon-spacing icon-img"> <!-- LIKES -->
-                    <i class="icon ion-md-heart shrink-icon"></i>
-                    <span class="likes">12</span>
-                </div>
-            </div>
-
-        </div>
-
-
-        <!-- Path: aside-container. -->
-        <div class="aside-container aside-left">
-           
-            <div class="aside-item">
-                <h4 class="aside-item-title">
-                    Trending
-                </h4>
-                
-                <div class="aside-item-content article-item-container">
-                    
-                    <div class="aside-item-content-item aside-01">
-                        <img  class="article-image" src="./assets/image/Photoleap-11.png" alt="aside-img">
-                        <a href="#">
-                            <h5 class="aside-item-content-item-title">
-                                Healthy Lifestyle
-                            </h5>
-                        </a>
-                        <p class="aside-item-content-item-text">
-                            eating well is a must for a healthy lifestyle...
-                        </p>
-                    </div>
-
-                    <div class="aside-item-content-item aside-02">
-                        <img   class="article-image"  src="./assets/image/Photoleap-12.png" alt="aside-img">
-                        <a href="#">
-                            <h5 class="aside-item-content-item-title">
-                                Are we doomed for a cataclysmic event?
-                            </h5>
-                        </a>
-                        <p class="aside-item-content-item-text">
-                            Global warming is a threat to our planet and we need to act...
-                        </p>
-                    </div>
-
-                    <div class="aside-item-content-item aside-03">
-                        <img  class="article-image"  src="./assets/image/Photoleap-14.png" alt="aside-img">
-                        <a href="#">
-                            <h5 class="aside-item-content-item-title">
-                                Best DAW (Digital Audio Workstation) in the world
-                            </h5>
-                        </a>
-                        <p class="aside-item-content-item-text">
-                            MY favorite DAW is... shoot! I dont have a favorite DAW hahaha... what is your favorite DAW and why? leave a comment...
-                        </p>
-                    </div>
-
-                    <div class="aside-item-content-item aside-04">
-                        <img  class="article-image" src="./assets/image/Photoleap-15.png" alt="aside-img">
-                        <a href="#">
-                            <h5 class="aside-item-content-item-title">
-                                Backward compatibility
-                            </h5>
-                        </a>
-                        <p class="aside-item-content-item-text">
-                            Which console have you used to play the most games with backward compatibility?...
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-    <!-- end of articles section -->
-
    
-   
-    <!-- Path: footer.html -->
 
-        
-    <!-- <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-left">
-                <div class="footer-logo">
-                    <img src="./assets/img/logo.png" alt="logo">
-                </div>
-                <div class="footer-text">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec euismod, nisl eget consectetur sagittis,
-                        nisl nunc ultricies nisi, eu aliquet nisl nunc eget
-                        consectetur sagittis.
-                    </p>
-                </div>
-            </div>
-            <div class="footer-right">
-                <div class="footer-right-container">
-                    <div class="footer-right-item">
-                        <h3>About</h3>
-                        <ul class="footer-list">
-                            <li class="footer-list-item">
-                                <a href="#" class="footer-list-link">About</a>
-                            </li>
-                            <li class="footer-list-item">
-                                <a href="#" class="footer-list-link">Reviews</a>
-                            </li>
-                            <li class="footer-list-item">
-                                <a href="#" class="footer-list-link">Trending</a>
-                            </li>
-                            <li class="footer-list-item">
-                                <a href="#" class="footer-list-link">Join</a>
-                            </li>
-                            <li class="footer-list-item">
-                                <a href="#" class="footer-list-link">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-right-item">
-                        <h3>Follow</h3>
-                        <ul class="footer-list">
-                            <li class="footer-
-                            list-item">
-                                <a href="#" class="footer-list-link">Facebook</a>
-                            </li>
-                            <li class="footer-list-item">
-                                <a href="#" class="footer-list-link">Twitter</a>
-                            </li>
-                            <li class="footer-list-item">
-                                <a href="#" class="footer-list-link">Instagram</a>
-                            </li>
-                            <li class="footer-list-item">
-                                <a href="#" class="footer-list-link">Youtube</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer> -->
+    <!-- footer -->
+    <footer class="footer" id="footer">
+        Footer
+    </footer>
 
     <script src="./assets/js/main.js"></script>
 </body>

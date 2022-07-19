@@ -1,6 +1,5 @@
 /* import font api */
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
-/* import font awesome */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Montserrat&family=Sacramento&display=swap');
 
 /* create variables for the css doc */
 :root {
@@ -16,7 +15,8 @@
     --color-secondary: #fafafa;
     --color-tertiary: #9ac9f0;
     --font-primary: 'Roboto', sans-serif;
-    --font-secondary: 'font-awesome', sans-serif;
+    --font-secondary: 'Merriweather', sans-serif;
+    --font-tertiary: 'Monserrat', sans-serif;
     --hover-light-color: #ff3434;
     /* https://www.pixelconverter.com/pixel-to-percentage-converter/ */
     /* https://elementor.com/help/whats-the-difference-between-px-em-rem-vw-and-vh/#:~:text=While%20PX%2C%20EM%2C%20and%20REM%20are%20primarily%20used,height%2C%20or%20the%20full%20height%20of%20the%20screen. */
@@ -42,263 +42,137 @@
     box-sizing: border-box;
     margin: 0%;
     padding: 0%;
+    list-style: none;
+    text-decoration: none;
     
 }
 
-/* screen size changes for responsive web-page */
-@media screen and (min-width: 600px) {
-    
-    .ion-md-list{
-        display: none;
-    }   
+body {
+    background-color: var(--secondary-bg-color);
+    margin: 0;
+    padding: 0;
 }
 
 /* document styling */
 html {
-    font-size: 62.5%;
-    font-family: var(--font-primary)   
+    /* font-size: 62.5%; */
+    font-family: var(--font-secondary); 
 }
 
-/* body */
-body {
-    background-color: var(--primary-bg-color);
+/* grid layout */
+.new-article-grid-layout {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 1fr = 100%  this is the column*/
+    grid-template-rows: .2fr 2fr 1.5fr 1.3fr; /* 1fr = 100%  this is the row*/
+    grid-template-areas:
+        "nav nav nav nav"
+        "main main main aside"
+        "content-01 content-02 content-03 aside"
+        "footer footer footer footer";
+}
+
+nav {
+    grid-area: nav;
+    background-color: rgb(127, 127, 224); /* temporary color */
     color: var(--color-secondary);
-    font-family: var(--font-primary);
-    font-size: var(--font-size-primary);
-    letter-spacing: 1px;  
-}
-
-/* anchor tags */
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-/* images (img) */
-img {
-    max-width: 100%;
-    display: block;
-}
-
-/* unodered lists */
-ul {
-    list-style: none;
-    font-size: var(--font-size-secondary);     
-}
-
-/* buttons */
-input, 
-button{
-    font-family: var(--font-primary);
-    font-size: var(--font-size-primary);
-    border: none;
-    border-radius: var(--border-radius);
-    background-color: var(--color-secondary);
-    color: var(--color-secondary);
-    letter-spacing: 1px;
-    background-color: transparent;
-    border: none;
-    outline: none;
-}
-
-/* styling for icons */
-i { 
-    font-size: var(--font-size-tertiary);
-    color: var(--color-tertiary);
-    border: none;
-    outline: none;
-    padding: auto;
-    z-index: 30;
-    
-}
-
-/* styling for the nav-container */
-.nav-container {
-    max-width: 160rem; 
-    margin: 0 auto;
-    padding: 0 var(--gap);
-    
-}
-
-/* position for buttons */
-.possition-btn-center {
-    align-items: center;
-    justify-content: center;
-    display: inline-flex;
-}
-
-/* hide the login/log-out (text) buttons when the screen is small */
-.smll-screen-hidden {
-   /* visibility: hidden;*/ /* with visibiliy, the element is not displayed. however 
-                                the position of the element is retained. element leaves a shadow of itself 
-                                and the space cannot be occupied by other elements unless set to display absolute */
-    display: none;          /* with display (set to none) the element is totally removed
-                                allowing other elements to fill the space left by the element 
-                                that is taken out of the display. THIS IS BETTER IN THIS CASE*/
-}
-
-/* show the list btn */
-.lrg-screnn-hidden {
-    display: block;
-}
-
-/* styling the header container section */
-.header {
-    background-color: var(--primary-bg-color);
-    color: var(--color-secondary);
-    padding: 0.5rem;
-    margin: 0 auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 200 !important;
-    
-}
-/* The navigation */
-.nav-bar {
-    display: flex;
+    /* font-size: var(--font-size-secondary); */
+    font-family: var(--font-secondary);
+    /* display: flex; */
     justify-content: space-between;
     align-items: center;
-    padding-block: var(--gap);
-}
-/* the logo */
-.logo {
-    font-size: var(--font-size-tertiary);
-    font-weight: bold;
-    color: var(--color-primary);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-decoration: none;
-    border-radius: 20px;  
-}
-
-/* styling for the class "menu" inside the div containing the anchor tags
-(<a>) in the unodered lists tags (<ul>) */
-.menu {
-    display: none; /* hides the menu when the screen is small */
-    position: absolute;
-    top: 8.5rem;
-    right: var(--gap);
-    width: 23rem;
     padding: var(--gap);
-    background-color: var(--secondary-bg-color);
-    /* this will show and hide the menu */
-    /* opacity: 0;          /* this will hide the menu items but the links will still be clickable 
-    /* transform: scale(0); /* resolves the problem (above) of the links being clickable */
-    z-index: 30; /* this will make the menu appear above the header */   
 }
 
-.list { 
+main {
+    grid-area: main;
+    background-color: rgb(90, 90, 62); /* temporary color */
+    color: var(--color-secondary);
+    font-size: var(--font-size-secondary);
+    font-family: var(--font-secondary);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: var(--gap);
+    padding: var(--gap);
+    border-color: solid var(--primary-bg-color);
+    /* border-style: solid;      */
 }
 
-.menu > .list{  /* this affects the list that is direct child of the menu only*/
-    flex-direction: column;
-}
-
-.list-link.current {
-    color: var(--color-primary);
-    font-weight: bold;
-}
-
-.ion-md-close{
-    display: none; /* this will hide the close icon */  
-}
-
-.btn {
-    cursor: pointer;
-}
-
-/* psuedo effects */
-.list-link:hover,
-.btn:hover,
-.btn:hover span{
-    color: var(--color-primary);
-    text-decoration: none;
-}
-
-i:hover,
-.logo:hover {
+aside {
+    grid-area: aside;
+    background-color: rgb(148, 148, 77); /* temporary color */
     color: var(--color-secondary);
-    text-decoration: none;
-    outline: none;
-}
-/* end of menu styling */
-
-/* styling for the search form */
-.search-form-box {
-    visibility: hidden;
-    width: 100%;
-    max-width: 100%;
-    height: 100vh;
-    position: fixed;
-    display: flex;
-    background-color: var(--primary-bg-color);
-    top: 0;
-    left: 0;
-    /* add image to background */
-    z-index: 31;    /* this will make the menu appear above the header */   
-}
-
-.form-box {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: auto;
-    gap: var(--gap);
-}
-
-.search-form {
+    font-size: var(--font-size-secondary);
+    font-family: var(--font-secondary);
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: var(--gap);
 }
 
-.search-input,
-.search-btn {
-    display: inline-block;
-    padding: var(--gap);
-    border: 2.5px solid var(--secondary-bg-color);
+.content-01 {
+    grid-area: content-01;
+    background-color: rgba(150, 150, 63, 0.54); /* temporary color */
+    color: var(--color-secondary);
     font-size: var(--font-size-secondary);
-    padding: 1.5rem;
-    background-color: transparent;
-    box-shadow: var(--color-primary) 0px 0px 1px;
-}
-
-.search-input {
-    width: 100%;
-    border-right: none;
-    text-align: center;
-}
-
-.search-btn {
-    border-left: none;
-    color: var(--color-secondary);
-    font-weight: bold;
-    cursor: pointer;
-    background-color: var(--secondary-bg-color);
-}
-
-.close-search-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
+    font-family: var(--font-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: var(--gap);
-    cursor: pointer;
-    color: var(--color-secondary);
-    font-weight: bold;
 }
-/* end of search form styling */
+
+.content-02 {
+    grid-area: content-02;
+    background-color: rgba(150, 150, 63, 0.54); /* temporary color */
+    color: var(--color-secondary);
+    font-size: var(--font-size-secondary);
+    font-family: var(--font-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--gap);
+}
+
+.content-03 {
+    grid-area: content-03;
+    background-color: rgba(150, 150, 63, 0.54); /* temporary color */
+    color: var(--color-secondary);
+    font-size: var(--font-size-secondary);
+    font-family: var(--font-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--gap);
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(127, 127, 224); /* temporary color */
+    color: var(--color-secondary);
+    font-size: var(--font-size-secondary);
+    font-family: var(--font-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--gap);
+}
+ 
+
+    
+   
+
+/* <!-- Logo -->  */
+
+    
 
 
+/* <!-- Nav bar styling --> */
 
+/* <!-- main --> */
 
+/* <!-- sidebar --> */
 
+/* <!-- content --> */
 
-
-
-
-
+/* <!-- footer --> */
