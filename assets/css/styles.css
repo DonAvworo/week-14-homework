@@ -67,7 +67,8 @@ nav ul li a {
                     
 }
 
-#checkbox{
+#checkbox{ /*<!-- the id checkbox is used to activate the menu icon,
+            which will then populate the screen. this  function will be done in js or css -->*/
     display: none;  
 }
 
@@ -100,20 +101,29 @@ nav ul li a {
         position: fixed;
         top: 80px;
         left: 0;
-        background: var(--secondary-bg-color);
+        background: var(--transparent-bg-color-dark-dark);
         width: 100%;
         height: 100%;
         z-index: 20;
         padding: 0;
         margin: 0;
         text-align: center;
+        left : -100%;
+        transition: all .8s ease-in-out;  /* this will make the menu slide in and out (this affects the code in line 122)*/
     }
     nav ul li {
         display: block;
+        margin: 0 auto;
     }
     nav ul li a {
         display: block;
         text-align: center;
+    }
+   
+
+    #checkbox:checked ~ ul { /*<!-- this will show the menu when the checkbox is checked, which done  -->*/
+        left: 0;
+        
     }
 
 
