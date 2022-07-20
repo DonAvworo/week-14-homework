@@ -5,8 +5,8 @@
 :root {
     --gradient-primary: linear-gradient(to right, #f6d365 0%, #fda085 100%);
     --gradient-secondary: linear-gradient(to right, #65f6d9 0%, #d9a495 100%);
-    --primary-bg-color: #131417;
-    --secondary-bg-color: #383535;
+    --primary-bg-color: #19191b;
+    --secondary-bg-color: #232121ea;
     --tertiary-bg-color: #383232;
     --transparent-bg-color-dark-dark: rgba(0, 0, 0, 0.75);
     --transparent-bg-color-dark: rgba(0, 0, 0, 0.45);
