@@ -67,7 +67,43 @@ nav ul  li a {
     font-size: .7rem;
     text-transform: uppercase; 
 }
-    
+
+nav ul li a:hover {
+    color: var(--tertiary-bg-color);
+    background-color: var(--color-secondary)
+}
+
+nav.icons-button-container{
+    justify-content: center;
+    align-items: center;
+}
+nav .icons-button-container i {
+    /* color: var(--color-secondary); */
+    cursor: pointer;
+    background-color: transparent;
+
+}
+
+
+
+nav .icons-button-container i, a {
+    cursor: pointer;
+    /* color: var(--color-secondary); */
+    background: transparent;
+    border: none;
+}
+
+
+
+nav .icons-button-container .login-log-out-btn  {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    display: inline;
+    color: white;
+    font-family: var(--font-tertiary);
+}
+
 
     
 
