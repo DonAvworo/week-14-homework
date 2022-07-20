@@ -21,6 +21,7 @@
 }
 
 .logo.image {
+    display: flex;
     width: 100%;
     height: 100%;
     background-size: contain;
@@ -29,6 +30,7 @@
 }
 
 .logo-text {
+    display: flex;
     position: absolute;
     bottom: 0%;
     width: 100%;
@@ -46,33 +48,24 @@
 
 /* <!--   nav link   --> */
 nav ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+    float: right;
+    margin: 20px;
+    max-width: 100%;
 }
 
 nav ul li{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: var(--gap);
-    margin: 0;
-    list-style: none;
-    text-decoration: none;
-    color: var(--color-secondary);
-    font-family: var(--font-tertiary);
+    display: inline;
+    line-height: 80px;
+    margin: 0 1rem;
+    justify-self: unset;
 }
 
 nav ul  li a {
     text-decoration: none;
     color: var(--color-secondary);
     font-family: var(--font-tertiary);
-    font-size: 1rem;
-    text-transform: uppercase;
+    font-size: .7rem;
+    text-transform: uppercase; 
 }
     
 
