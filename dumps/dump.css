@@ -1,71 +1,274 @@
-/* styles to be effected with java script */
-/* .header.activated { */
-    /* box-shadow: 0 1px .5px rgba(83, 105, 139, 0.1); ; */
-    /* this will show the header */
-    /* opacity: 1;  */
-    /* this will scale the header */
-    /* transform: scale(1);  
-} */
+/* Path: articles */
 
-/* .menu.activated { */
-    /* box-shadow: 1px 1px 1px rgba(83, 105, 139, 0.1); ; */
-    /* this will show the menu */
-    /* opacity: 1;  */
-    /* this will scale the menu */
-    /* transform: scale(1);  
-} */
-
-/* hide the menu when the screen is small */
-/* .toggle-icon.activated .open-menu-icon {
-    display: none; 
-} */
-
-/* show the menu when the screen is small */
-/* .toggle-icon.activated  .close-menu-icon {
-    display: block;  
-} */
-
-/* screen size changes (responsive design) */
-@media screen and (min-width: 600px) { /* any device with width more than 600px will be affected */
-    .menu {
-        display: block;
-        opacity: 1;
-        transform: scale(1);
-        height: auto; /* this will make the menu expand to the height of the screen */
-    }
-    .ion-md-close{
-        display: none;
-    }
-    .ion-md-list{
-        display: none;
-    }
-    .logo {
-        font-size: var(--font-size-secondary);
-    }
-    .menu > .list{
-        flex-direction: row;
-    }
-    .list {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .list-link {
-        font-size: var(--font-size-secondary);
-    }
-    .list-link.current {
-        font-size: var(--font-size-primary);
-    }
-    .list-link:hover,
-    .btn:hover,
-    .btn:hover span{
-        color: var(--color-primary);
-        text-decoration: none;
-    }
-    .nav-bar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-block: var(--gap);
-    }
+/* <!-- heading. this is the header of the article--> */
+.articles-container {
+    display: flex;
+    position: relative;
+    margin-top: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: var(--gap);
+    background-color: var(--secondary-bg-color);
+    border-radius: var(--border-radius);
 }
+
+
+/* <!-- article container --> */
+.articles-container {
+padding-block: var(--gap-double);
+background-color: var(--secondary-bg-color);
+border-radius: var(--border-radius);
+gap: var(--gap);
+
+    
+    
+}
+/* article-banner.html */
+.banner-container {
+position: relative;
+/* display: flex; */
+/* justify-content: center; */
+align-items: center;
+width: 100%;
+height: 10%;
+/* padding: var(--gap); */
+background-color: var(--secondary-bg-color);  
+}
+
+/* TODO  have the banner to remain visible when scrollin up*/
+@media screen and (min-width: 370px) { 
+.banner-container  {
+    position: sticky;
+} 
+}
+
+.banner-image-container{
+display: flex;
+width: 100%;
+/* padding: var(--gap); */
+}
+
+.banner-image {
+display: flex;
+width: 100%;
+height: 100px;
+object-fit: cover;
+/* object-position: inherit; */
+}
+
+.banner-text {
+position: absolute;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: var(--gap);
+text-align: center;
+text-transform: uppercase;
+/* background-color: var(--secondary-bg-color); */
+background-color: transparent;
+color: var(--color-secondary);
+border-radius: var(--border-radius);
+text-shadow: var(--color-primary) 0px 0px 30px;
+/* border: 1.5px solid var(--color-primary); */
+/* box-shadow: var(--color-primary) 0px 0px 30px; */
+max-width: 100%;
+right: 1rem;
+top: 1rem;    
+}
+
+/* banner media  query */
+@media screen and (max-width: 400px) {
+.banner-text {
+    font-size: .8rem;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* text-align: center; */
+    top: .2rem;
+    right: 3.5rem;
+    
+}
+}
+
+/* <!-- article-header --> */
+.articles-header { 
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: var(--gap);
+background-color: var(--secondary-bg-color);
+border-radius: var(--border-radius);
+}
+
+
+.articles-header-link{
+font-size: var(--font-size-secondary);
+font-weight: bold;
+color: var(--color-secondary);
+border-radius: var(--border-radius);
+z-index: 100;
+top: 3rem;
+left: 3rem;
+text-transform: uppercase;
+text-shadow: aqua 0px 0px 1px;
+text-decoration: none;
+color: var(--color-primary);
+cursor: pointer;
+max-width: 100%;
+flex-direction: column;
+}
+
+:hover.articles-header-link {
+text-shadow: var(--color-primary) 0px 0px 30px;
+text-indent: unset;
+text-align: center;
+justify-items: center;
+color: var(--color-secondary);
+
+}
+
+/* <!-- Path: article container.  */
+.article-item-container {
+position: relative;
+display: flex;
+
+}
+
+.article-image{
+/* position: relative; */
+display: flex;
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: inherit;
+cursor: pointer;
+}
+
+.article-image:hover {
+opacity: .5;
+}
+
+
+/* <!-- article title --> */
+.article-item-title { 
+position: absolute;
+display: flex;
+width: 100%;
+justify-content: center;
+text-align: center;
+text-transform: uppercase;
+text-shadow: var(--color-primary) 0px 0px 30px;
+background-color: var(--transparent-bg-color-dark);
+top: 0;
+left: 0%;
+padding: var(--gap);
+}
+
+.article-item-title {
+text-shadow: var(--color-primary) 0px 0px 30px;
+text-indent: unset;
+justify-items: center;
+color: var(--color-secondary);
+}
+
+/* <!-- this is the content of the post --> */
+.article-item-text {
+position: absolute;
+display: flex;
+width: 100%;
+padding: var(--gap);
+background-color: var(--transparent-bg-color-dark);
+bottom: 0;
+left: 0%;
+text-align: center;
+border: 0 .5rem solid var(--transparent-bg-color-light);
+
+}
+
+/* scale the the text to fit the screen  small screens */
+@media screen and (min-width: 20px) {
+.article-item-text {
+    font-size: .9rem;
+}
+}
+
+/* scale the the text to fit the screen large  screens */
+@media screen and (min-width: 350px) {
+.article-item-text {
+    font-size: var(--font-size-secondary);
+}
+}
+
+/* <!-- container for icon, time, author and date data --> */
+.icons-container {
+margin-right: var(--gap);
+position: absolute;
+width: 100%;
+bottom: 0;
+background-color: var(---transparent-bg-color-dark);
+display: flex;
+justify-content: center;
+}
+
+.icon-img {
+max-width: 100%;
+cursor: pointer;
+}
+
+.icon-img:hover {
+filter: brightness(.5);
+}
+
+/* shrink icons to fitcontainer */
+@media screen and (min-width: 250px) {
+.icons-container {
+    width: auto;
+    height: auto;
+    margin-right: 0;
+    font-size: 1rem;
+}
+
+.shrink-icon{
+    font-size: 1.5rem;
+    gap: var(--gap);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-item-info-item {
+    font-size: 1rem;
+    background-color: black;
+    max-width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+}
+
+/* flex styling for the  article container */
+
+.article-item-container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
+}
+
+
+
+
+
+
+
+/* End of Path: article container styling */
+
+/* <!-- Path: aside container styling */
+
+    

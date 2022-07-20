@@ -13,96 +13,41 @@
     <title>Tech-Blog | Home </title>
 </head>
 <body>
-    
-    <!-- New article container -->
-    <div class="new-article-container new-article-grid-layout">
-           
-        <nav class="nav-bar " id="nav-bar">
-            
-            <!--    Logo    -->  
-            <div class="logo-container"> 
-                <img src="./assets/image/tech-blog-logo.JPG" alt=" "class="logo-image" width="100px">
-                <label class="logo-text"> Tech-Blog</label> 
-            </div>
-            
-            <!--    nav link     -->
-            <ul class="nav-list">
-                <li class="nav-items"><a href="#" class="nav-link">Home</a></li>
-                <li class="nav-items"><a href="#" class="nav-link">Categories</a></li>
-                <li class="nav-items"><a href="#" class="nav-link">Reviews</a></li>
-                <li class="nav-items"><a href="#" class="nav-link">Contact</a></li>
-                <li class="nav-items"><a href="#" class="nav-link">Members</a></li>
-                <li class="nav-items"><a href="#" class="nav-link hide-in-lrg-screen">Sign-In</a></li>
-                <li class="nav-items"><a href="#" class="nav-link hide-in-lrg-screen">Sign-Up</a></li>
-            </ul>
 
-            <!-- buttons for  mobile  view  -->
-            <div class="icons-button-container">
-                <button class="search-button">
-                    <i class="icon ion-md-search"></i>
-                </button>
-
-                <button class="close">
-                    <i class="icon ion-md-close"></i>
-                </button>
-
-                <button class="hamburger-button">
-                    <i class="icon ion-md-menu"></i>
-                </button>
-
-                <a href="#" class="list-link  login-log-out-btn smll-screen-hidden btn">
-                    Login
-                </a>
+    <!--    nav-bar container   -->
+    <nav>
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="checkbox-btn">
+            <i class="icon ion-md-menu"></i>
+        </label>
+        <a class="logo-wrapper" href="index.html">
+            <img class="logo-image" src="./assets/image/tech-blog-logo.png" alt="logo image" width="50px">
+        </a>
         
-                <a href="#" class="list-link  login-log-out-btn smll-screen-hidden btn sign-up-btn fancy-border">
-                    <span>Log out</span>
-                </a>
-            </div>  
-        </nav>
-        <!--    End of nav bar   -->
 
-        <!--    Banner container    -->
-
-        <div class="banner-container">
-            <div class="banner-text-container">
-                <h1 class="banner-text">
-                    Tech-Blog
-                </h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Membership</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="hide-in-lrg-screen"><a href="#">Sign in</a></li>
+            <li class="hide-in-lrg-screen"><a href="#">Join</a></li>
+        </ul>
+         
+        <!-- nav icons -->
+        <div class="nav-icons">
+            <div class="nav-icon-wrapper">
+                <i class="icon ion-md-close close-icon-btn"></i>
+            </div>
+            <div class="nav-icon-wrapper">
+                <i class="icon ion-md-search search-icon-btn"></i>
             </div>
         </div>
+
+    </nav>
     
-        <!-- main container-->
-        <main class="main-container new-article-items" id="main-container">
-            Main 
-        </main>
-
-        <!-- sidebar container-->
-        <aside class="sidebar-container new-article-items" id="sidebar-container">
-           Aside
-        </aside>
-
-        <!-- content  01 -->
-        <section class="content-01 section-content-container new-article-items" id="content-01">
-            Content-01
-        </section>
-
-        <!-- content  02 -->
-        <section class="content-02 section-content-container new-article-items" id="content-02">
-            Content-02
-        </section>
-
-        <!-- content  03 -->
-        <section class="content-03 section-content-container new-article-items" id="content-03">
-            Content-03
-        </section>
-    </div>
-   
-
-    <!-- footer -->
-    <!-- <footer class="footer new-article-items" id="footer">
-        Footer
-    </footer> -->
-
+    
     <script src="./assets/js/main.js"></script>
 </body>
 

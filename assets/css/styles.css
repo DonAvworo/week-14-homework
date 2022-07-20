@@ -1,110 +1,106 @@
 
-/* <!--         Nav bar styling           --> */
-
-/* <!--     Nav bar     --> */
-.nav-bar {
-    position: fixed;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--gap);
-    background-color: var(--primary-bg-color);
-}
-
-/* <!--     Logo    --> */
-.logo-container {
-    display: flex;
+/* <!--    nav-bar container   --> */
+nav {
     position: relative;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo.image {
-    display: flex;
+    background: var(--primary-bg-color);  
+    height: 80px;
     width: 100%;
-    height: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    /* margin: 0 .2rem; */
 }
 
-.logo-text {
-    display: flex;
-    position: absolute;
-    bottom: 0%;
-    width: 100%;
-    text-align: center;
-    font-size: 1rem;
-    font-family: var( --font-tertiary);
-    color: var(--primary-bg-color);
-    font-size: 1rem;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* font-size: var(--font-size-secondary); */
-}
-
-/* <!--   nav link   --> */
-nav ul {
-    float: right;
-    margin: 20px;
-    max-width: 100%;
-}
-
-nav ul li{
-    display: inline;
+.logo-wrapper {
+    position: relative;
     line-height: 80px;
-    margin: 0 1rem;
-    justify-self: unset;
-}
-
-nav ul  li a {
-    text-decoration: none;
-    color: var(--color-secondary);
-    font-family: var(--font-tertiary);
-    font-size: .7rem;
-    text-transform: uppercase; 
-}
-
-nav ul li a:hover {
-    color: var(--tertiary-bg-color);
-    background-color: var(--color-secondary)
-}
-
-nav.icons-button-container{
-    justify-content: center;
+    padding: 0 50px;
     align-items: center;
+    width: 100%;
+    left: 1rem;
+    top: .5rem; /* this will push the wrapper down to centralise the image */
+    
 }
-nav .icons-button-container i {
-    /* color: var(--color-secondary); */
+
+.logo-wrapper .logo-image {
+    line-height: 80px;
+    background: rgb(200, 205, 210);
     cursor: pointer;
-    background-color: transparent;
-
+    padding: 2px 100;
+    border: 2px solid var(--color-secondary);
+    border-radius: 50%;
+   
 }
 
+.logo-wrapper .logo-image:hover {
+    opacity: .5;
+}
 
+nav ul {
+   float: right;
+   margin-right: 20px; 
+}
 
-nav .icons-button-container i, a {
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: var(--color-secondary);
+    color: rgb(236, 45, 45);
+    font-size: 17px;
+    margin-right: 30px; /* this will push the links to the left away from the icons */   
+   
+}
+
+/* .hide-in-lrg-screen {
+    display: none;
+} */
+
+/* inputs  and buttons */
+.checkbox-btn {
+    font-size: 2rem;
+    color: var(--color-secondary);
     cursor: pointer;
-    /* color: var(--color-secondary); */
-    background: transparent;
-    border: none;
+    margin-right: 40px;
+    float: right;
+    line-height: 80px;
 }
 
+#checkbox{
+    display: none;  
+}
 
-
-nav .icons-button-container .login-log-out-btn  {
-    background-color: transparent;
+.nav-icon-wrapper .close-icon-btn  {
+    font-size: 2rem;
+    color: var(--color-secondary);
     cursor: pointer;
-    border: none;
-    display: inline;
-    color: white;
-    font-family: var(--font-tertiary);
+    position: absolute;
+    /* margin-right: 40px; */  /* this will move the icon 40px left to the search icon */
+    right: 40px; 
+    top: 0;
+    line-height: 80px;
 }
 
+.close-icon-btn { /* the close icon is set to this difault and will appear when the menu button 
+                    is clicked. this action will hide the menu  button and the close button  will
+                    be used asa reverse action. CAN BE DONE IN CSS  OR JS*/
+    display: none;
+}
 
+.nav-icon-wrapper .search-icon-btn {
+    font-size: 2rem;
+    color: var(--color-secondary);
+    cursor: pointer;
+    position: absolute;
+    margin-right: 40px; /* this will move the icon 40px left to the search icon */
+    right: 40px; 
+    top: 0;
+    line-height: 80px;
+}
+
+@media screen and (max-width: 900px) {
+  
+}
     
 
 
